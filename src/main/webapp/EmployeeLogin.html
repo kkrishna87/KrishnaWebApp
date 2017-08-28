@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>EmployeeLogin</title>
+	<script>
+		function sub(id){
+			if(id=="empBtn"){
+				document.getElementById("form").action="employee";
+				document.getElementById("form").submit();
+			}
+			else{
+				document.getElementById("form").action="department";
+				document.getElementById("form").submit();
+			}
+		}
+	</script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<h2>Employee Login</h2>
+	<form id="form" method="post">
+		<div class="form-group">
+			<label class="col-md-4 control-label">EmployeeID*</label>
+			<div class="col-md-8 inputGroupContainer">
+				<div class="input-group">
+					<input id="Employee_Id" name="Employee_Id"placeholder="employeeId"
+						class="form-control" type="text" required><button type="button" id="empBtn" class="btn" onclick="sub(this.id)">Get Employee</button>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label">DepartmentID*</label>
+			<div class="col-md-8 inputGroupContainer">
+				<div class="input-group">
+					<input id="Department_Id" name="Department_Id" placeholder="departmentId"
+						class="form-control" type="text" required><button type="button" id="deptBtn" class="btn" onclick="sub(this.id)">Get Employees</button>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-md-6">
+				
+			</div>
+			<div class="col-md-6">
+				
+			</div>
+		</div>
+	</form>
+</body>
+</html>
