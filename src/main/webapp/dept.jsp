@@ -19,11 +19,11 @@
 		</tr>
 		<c:forEach items="${requestScope.employees}" var="employee">
 			<tr>
-				<td>${employee.empNum}</td>
-				<td>${employee.deptNum}</td>
-				<td>${employee.DOJ}</td>
-				<td>${employee.DOB}</td>
-				<td>${employee.Salary}</td>
+				<td>${employee.getEmpNum()}</td>
+				<td>${employee.getDeptNum()}</td>
+				<td>${employee.getDOJ()}</td>
+				<td>${employee.getDOB()}</td>
+				<td>${employee.getSalary()}</td>
 			</tr>
 		</c:forEach>
 	</table>
